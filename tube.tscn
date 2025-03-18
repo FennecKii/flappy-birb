@@ -3,12 +3,10 @@
 [ext_resource type="Script" uid="uid://b4i3tc48yqi8p" path="res://tube.gd" id="1_02hxq"]
 [ext_resource type="Texture2D" uid="uid://d27c4862exy8s" path="res://icon.svg" id="1_7jvro"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_02hxq"]
-radius = 5.0
-height = 40.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8nf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02hxq"]
-size = Vector2(17, 68)
+size = Vector2(17, 66)
 
 [node name="Tube" type="Node2D" groups=["Tubes"]]
 script = ExtResource("1_02hxq")
@@ -18,8 +16,8 @@ enabled = false
 zoom = Vector2(2, 2)
 
 [node name="TubeSpriteTop" type="Sprite2D" parent="."]
-position = Vector2(0, -98)
-scale = Vector2(0.25, 1)
+position = Vector2(0.148, -145)
+scale = Vector2(0.330438, 1.75)
 texture = ExtResource("1_7jvro")
 
 [node name="TubeDetection" type="Area2D" parent="TubeSpriteTop"]
@@ -30,12 +28,12 @@ collision_mask = 5
 
 [node name="TubeCollision" type="CollisionShape2D" parent="TubeSpriteTop/TubeDetection"]
 position = Vector2(4.76837e-07, 9.53674e-07)
-scale = Vector2(3, 3)
-shape = SubResource("CapsuleShape2D_02hxq")
+scale = Vector2(1.5, 6.25)
+shape = SubResource("RectangleShape2D_5x8nf")
 
 [node name="TubeSpriteBottom" type="Sprite2D" parent="."]
-position = Vector2(0, 98)
-scale = Vector2(0.25, 1)
+position = Vector2(0.148, 145)
+scale = Vector2(0.330438, 1.75)
 texture = ExtResource("1_7jvro")
 
 [node name="TubeDetection" type="Area2D" parent="TubeSpriteBottom"]
@@ -46,15 +44,15 @@ collision_mask = 5
 
 [node name="TubeCollision" type="CollisionShape2D" parent="TubeSpriteBottom/TubeDetection"]
 position = Vector2(4.76837e-07, 9.53674e-07)
-scale = Vector2(3, 3)
-shape = SubResource("CapsuleShape2D_02hxq")
+scale = Vector2(1.5, 6.25)
+shape = SubResource("RectangleShape2D_5x8nf")
 
 [node name="ScoreDetection" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreDetection"]
-position = Vector2(19, 0)
+position = Vector2(20, 0)
 shape = SubResource("RectangleShape2D_02hxq")
 
 [connection signal="body_entered" from="TubeSpriteTop/TubeDetection" to="." method="_on_tube_entered"]
