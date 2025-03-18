@@ -1,6 +1,6 @@
 extends Node2D
 
-var SPEED: float = 200.0
+var SPEED: float = 100.0
 
 signal kill_thing
 
