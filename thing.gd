@@ -1,14 +1,11 @@
 extends CharacterBody2D
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-
+const JUMP_VELOCITY = -250.0
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	velocity += get_gravity() * delta
-
+	velocity.y = clamp(velocity.y, -300, 350)
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump"):
 		velocity.y = JUMP_VELOCITY
