@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhna661np5vj6"]
+
+[ext_resource type="Script" uid="uid://c2yr87bwrqk8n" path="res://death_panel.gd" id="1_2hn82"]
+
+[node name="DeathPanel" type="Control"]
+process_mode = 3
+z_index = 2
+layout_mode = 3
+anchor_left = -0.222222
+anchor_top = -0.234568
+anchor_right = 0.222222
+anchor_bottom = 0.209877
+offset_top = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 0
+script = ExtResource("1_2hn82")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -64.0
+scale = Vector2(2, 2)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 61.0
+offset_bottom = 81.0
+scale = Vector2(0.75, 0.75)
+
+[node name="Score" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Highscore" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Highscore: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play Again" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 4
+position = Vector2(256, 144)
+zoom = Vector2(2.25, 2.25)
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Play Again" to="." method="_on_play_again_pressed"]
