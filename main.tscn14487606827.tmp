@@ -52,7 +52,6 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="DeathPanel" parent="." instance=ExtResource("3_h2yge")]
-visible = false
 
 [connection signal="body_entered" from="ThingBottomBound" to="." method="_on_bottom_bound_entered"]
 [connection signal="area_entered" from="TubeBound" to="." method="_on_tube_bound_entered"]
