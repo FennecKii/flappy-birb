@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://1wdj4ifys400"]
+
+[ext_resource type="Script" uid="uid://buhvj4143vib3" path="res://Scripts/thing.gd" id="1_glpr6"]
+[ext_resource type="Texture2D" uid="uid://dkwywferchkej" path="res://Assets/Art/Character/Thing Animation 1.0.0.0-Sheet.png" id="2_sbnfi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llmkr"]
+atlas = ExtResource("2_sbnfi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mw5i"]
+atlas = ExtResource("2_sbnfi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n77op"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llmkr")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_6mw5i")
+}],
+"loop": true,
+"name": &"flap",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vu45j"]
+radius = 5.5
+
+[node name="Thing" type="CharacterBody2D" groups=["Things"]]
+collision_mask = 6
+script = ExtResource("1_glpr6")
+
+[node name="ThingSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(5.96046e-07, 5.96046e-07)
+scale = Vector2(1.625, 1.625)
+sprite_frames = SubResource("SpriteFrames_n77op")
+animation = &"flap"
+autoplay = "flap"
+frame_progress = 0.772078
+
+[node name="ThingCollision" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_vu45j")

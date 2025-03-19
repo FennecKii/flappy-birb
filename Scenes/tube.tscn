@@ -1,12 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwhgictrahr53"]
 
-[ext_resource type="Script" uid="uid://b4i3tc48yqi8p" path="res://tube.gd" id="1_02hxq"]
+[ext_resource type="Script" uid="uid://b4i3tc48yqi8p" path="res://Scripts/tube.gd" id="1_02hxq"]
 [ext_resource type="Texture2D" uid="uid://d27c4862exy8s" path="res://icon.svg" id="1_7jvro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8nf"]
+size = Vector2(20, 20.36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02hxq"]
-size = Vector2(17, 66)
+size = Vector2(17, 54)
 
 [node name="Tube" type="Node2D" groups=["Tubes"]]
 script = ExtResource("1_02hxq")
@@ -16,8 +17,8 @@ enabled = false
 zoom = Vector2(2, 2)
 
 [node name="TubeSpriteTop" type="Sprite2D" parent="."]
-position = Vector2(0.148, -145)
-scale = Vector2(0.330438, 1.75)
+position = Vector2(0.148, -144)
+scale = Vector2(0.330438, 1.76563)
 texture = ExtResource("1_7jvro")
 
 [node name="TubeDetection" type="Area2D" parent="TubeSpriteTop"]
@@ -27,13 +28,13 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="TubeCollision" type="CollisionShape2D" parent="TubeSpriteTop/TubeDetection"]
-position = Vector2(4.76837e-07, 9.53674e-07)
+position = Vector2(-0.111973, 1.5229e-05)
 scale = Vector2(1.5, 6.25)
 shape = SubResource("RectangleShape2D_5x8nf")
 
 [node name="TubeSpriteBottom" type="Sprite2D" parent="."]
-position = Vector2(0.148, 145)
-scale = Vector2(0.330438, 1.75)
+position = Vector2(0.148, 144)
+scale = Vector2(0.330438, 1.76563)
 texture = ExtResource("1_7jvro")
 
 [node name="TubeDetection" type="Area2D" parent="TubeSpriteBottom"]
@@ -43,7 +44,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="TubeCollision" type="CollisionShape2D" parent="TubeSpriteBottom/TubeDetection"]
-position = Vector2(4.76837e-07, 9.53674e-07)
+position = Vector2(-0.111973, 1.41859e-05)
 scale = Vector2(1.5, 6.25)
 shape = SubResource("RectangleShape2D_5x8nf")
 

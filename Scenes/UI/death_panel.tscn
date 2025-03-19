@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dhna661np5vj6"]
 
-[ext_resource type="Script" uid="uid://c2yr87bwrqk8n" path="res://death_panel.gd" id="1_2hn82"]
+[ext_resource type="Script" uid="uid://c2yr87bwrqk8n" path="res://Scripts/UI/death_panel.gd" id="1_2hn82"]
 
 [node name="DeathPanel" type="Control"]
 process_mode = 3

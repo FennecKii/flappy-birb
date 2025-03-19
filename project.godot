@@ -11,12 +11,21 @@ config_version=5
 [application]
 
 config/name="Flappy Thing"
+run/main_scene="uid://8618vnetgk3o"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://global.gd"
+Global="*res://Scripts/Globals/global.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
 
 [input]
 

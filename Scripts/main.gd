@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var tube_scene: PackedScene = preload("res://tube.tscn")
+@onready var tube_scene: PackedScene = preload("res://Scenes/tube.tscn")
 @onready var score_label: Label = $Score
 @onready var death_panel: Control = $DeathPanel
 
