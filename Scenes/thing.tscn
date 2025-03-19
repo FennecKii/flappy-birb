@@ -1,7 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://1wdj4ifys400"]
+[gd_scene load_steps=12 format=3 uid="uid://1wdj4ifys400"]
 
 [ext_resource type="Script" uid="uid://buhvj4143vib3" path="res://Scripts/thing.gd" id="1_glpr6"]
+[ext_resource type="Texture2D" uid="uid://cd4fys4gho44h" path="res://Assets/Art/Character/Thing(blue_etta) Sheet.png" id="2_llmkr"]
 [ext_resource type="Texture2D" uid="uid://dkwywferchkej" path="res://Assets/Art/Character/Thing Animation 1.0.0.0-Sheet.png" id="2_sbnfi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1naf1"]
+atlas = ExtResource("2_llmkr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n77op"]
+atlas = ExtResource("2_llmkr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0s1c"]
+atlas = ExtResource("2_llmkr")
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sbnfi"]
 atlas = ExtResource("2_sbnfi")
@@ -17,6 +30,25 @@ region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n77op"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1naf1")
+}],
+"loop": true,
+"name": &"blue fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n77op")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_e0s1c")
+}],
+"loop": true,
+"name": &"blue flap",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sbnfi")
@@ -41,6 +73,7 @@ animations = [{
 radius = 5.5
 
 [node name="Thing" type="CharacterBody2D" groups=["Things"]]
+process_mode = 3
 z_index = 1
 collision_mask = 6
 script = ExtResource("1_glpr6")
@@ -49,8 +82,8 @@ script = ExtResource("1_glpr6")
 position = Vector2(5.96046e-07, 5.96046e-07)
 scale = Vector2(1.625, 1.625)
 sprite_frames = SubResource("SpriteFrames_n77op")
-animation = &"flap"
-autoplay = "flap"
+animation = &"blue flap"
+autoplay = "blue flap"
 
 [node name="ThingCollision" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)

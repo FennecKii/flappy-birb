@@ -11,7 +11,7 @@
 size = Vector2(576, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21xkr"]
-size = Vector2(576, 22)
+size = Vector2(576, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(16, 328)
@@ -49,7 +49,7 @@ shape = SubResource("RectangleShape2D_0xm2m")
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ThingBottomBound/StaticBody2D"]
-position = Vector2(0, 128.2)
+position = Vector2(0, 127.2)
 shape = SubResource("RectangleShape2D_21xkr")
 
 [node name="TubeBound" type="Area2D" parent="."]
