@@ -1,15 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://8618vnetgk3o"]
+[gd_scene load_steps=8 format=3 uid="uid://8618vnetgk3o"]
 
 [ext_resource type="Script" uid="uid://dklfb6y24ow1e" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://1wdj4ifys400" path="res://Scenes/thing.tscn" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dhna661np5vj6" path="res://Scenes/UI/death_panel.tscn" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://dbs5clbgvkbyk" path="res://Assets/Art/Objects/Floor(100) 1.0.0.2.png" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bcxogfy4t7g2a" path="res://Scenes/floor.tscn" id="5_kry3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(576, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(16, 328)
+size = Vector2(16, 320)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_8gbba")
@@ -29,7 +30,7 @@ shape = SubResource("RectangleShape2D_0xm2m")
 collision_layer = 4
 
 [node name="Bottom" type="CollisionShape2D" parent="ThingBottomBound"]
-position = Vector2(0, 124)
+position = Vector2(0, 135)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="TubeBound" type="Area2D" parent="."]
@@ -43,11 +44,9 @@ shape = SubResource("RectangleShape2D_h2yge")
 [node name="FloorBound" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 16
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
 
 [node name="Left" type="CollisionShape2D" parent="FloorBound"]
-position = Vector2(-968, 0)
+position = Vector2(-1012, -1)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="Thing" parent="." instance=ExtResource("2_jjvhh")]
@@ -66,21 +65,30 @@ horizontal_alignment = 1
 [node name="DeathPanel" parent="." instance=ExtResource("3_kry3j")]
 visible = false
 
+[node name="Parallax" type="Parallax2D" parent="."]
+visible = false
+z_index = 1
+repeat_size = Vector2(28, 0)
+autoscroll = Vector2(-100, 0)
+repeat_times = 20
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="Floor" type="Sprite2D" parent="Parallax"]
+position = Vector2(0, 136)
+texture = ExtResource("4_jjvhh")
+
 [node name="Floor2" parent="." instance=ExtResource("5_kry3j")]
-offset_left = -960.0
-offset_top = 116.0
-offset_right = -640.0
-offset_bottom = 140.0
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
+offset_left = -1003.0
+offset_top = 127.0
+offset_right = -373.0
+offset_bottom = 146.0
 
 [node name="Floor" parent="." instance=ExtResource("5_kry3j")]
-offset_left = -320.0
-offset_top = 116.0
-offset_right = 0.0
-offset_bottom = 140.0
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
+offset_left = -373.0
+offset_top = 127.0
+offset_right = 257.0
+offset_bottom = 146.0
 
 [connection signal="body_entered" from="ThingBottomBound" to="." method="_on_bottom_bound_entered"]
 [connection signal="area_entered" from="TubeBound" to="." method="_on_tube_bound_entered"]

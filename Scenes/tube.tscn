@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwhgictrahr53"]
+[gd_scene load_steps=6 format=3 uid="uid://bwhgictrahr53"]
 
 [ext_resource type="Script" uid="uid://b4i3tc48yqi8p" path="res://Scripts/tube.gd" id="1_02hxq"]
-[ext_resource type="Texture2D" uid="uid://d27c4862exy8s" path="res://icon.svg" id="1_7jvro"]
+[ext_resource type="Texture2D" uid="uid://cl1ewx8eyb1fi" path="res://Assets/Art/Objects/Tube Top(100) 1.0.0.1.png" id="2_au44v"]
+[ext_resource type="Texture2D" uid="uid://dmmjkluodmu2h" path="res://Assets/Art/Objects/Tube Bottom(100) 1.0.0.1.png" id="3_adwee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8nf"]
-size = Vector2(20, 20.36)
+size = Vector2(23.2015, 20.36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02hxq"]
 size = Vector2(17, 54)
@@ -17,29 +18,29 @@ enabled = false
 zoom = Vector2(2, 2)
 
 [node name="TubeSpriteTop" type="Sprite2D" parent="."]
-position = Vector2(0.148, -144)
-scale = Vector2(0.330438, 1.76563)
-texture = ExtResource("1_7jvro")
+position = Vector2(0, -126)
+scale = Vector2(2, 2)
+texture = ExtResource("2_au44v")
 
 [node name="TubeDetection" type="Area2D" parent="TubeSpriteTop"]
-position = Vector2(0, -1.52588e-05)
-scale = Vector2(4, 1)
+position = Vector2(0.074, -8.50002)
+scale = Vector2(0.660876, 0.882813)
 collision_layer = 2
 collision_mask = 5
 
 [node name="TubeCollision" type="CollisionShape2D" parent="TubeSpriteTop/TubeDetection"]
-position = Vector2(-0.111973, 1.5229e-05)
+position = Vector2(-0.111973, 1.52588e-05)
 scale = Vector2(1.5, 6.25)
 shape = SubResource("RectangleShape2D_5x8nf")
 
 [node name="TubeSpriteBottom" type="Sprite2D" parent="."]
-position = Vector2(0.148, 144)
-scale = Vector2(0.330438, 1.76563)
-texture = ExtResource("1_7jvro")
+position = Vector2(0, 126)
+scale = Vector2(2, 2)
+texture = ExtResource("3_adwee")
 
 [node name="TubeDetection" type="Area2D" parent="TubeSpriteBottom"]
-position = Vector2(0, -1.52588e-05)
-scale = Vector2(4, 1)
+position = Vector2(0.074, 7.99998)
+scale = Vector2(0.660876, 0.882813)
 collision_layer = 2
 collision_mask = 5
 

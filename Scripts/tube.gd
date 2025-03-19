@@ -1,7 +1,7 @@
 extends Node2D
 
 func _physics_process(delta):
-	position.x -= Global.TUBE_SPEED * delta
+	self.position.x -= Global.TUBE_SPEED * delta
 
 func _on_tube_entered(body):
 	if body.name == "Thing":

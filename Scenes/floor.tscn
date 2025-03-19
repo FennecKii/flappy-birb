@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcxogfy4t7g2a"]
+
+[ext_resource type="Texture2D" uid="uid://dbs5clbgvkbyk" path="res://Assets/Art/Objects/Floor(100) 1.0.0.2.png" id="1_nvnu3"]
+[ext_resource type="Script" uid="uid://b1mtuvafx8duv" path="res://Scripts/floor.gd" id="2_agfsv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agfsv"]
+size = Vector2(20, 24)
+
+[node name="Floor" type="TextureRect" groups=["Floors"]]
+z_index = 1
+offset_right = 320.0
+offset_bottom = 24.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_nvnu3")
+stretch_mode = 1
+script = ExtResource("2_agfsv")
+
+[node name="Detection" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+position = Vector2(30, 12)
+scale = Vector2(3, 1)
+shape = SubResource("RectangleShape2D_agfsv")
