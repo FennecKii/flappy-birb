@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhna661np5vj6"]
+[gd_scene load_steps=3 format=3 uid="uid://dhna661np5vj6"]
 
 [ext_resource type="Script" uid="uid://c2yr87bwrqk8n" path="res://Scripts/UI/death_panel.gd" id="1_2hn82"]
+[ext_resource type="Theme" uid="uid://mxuh4rggdod8" path="res://Scripts/Resources/default_theme.tres" id="2_dhx06"]
 
 [node name="DeathPanel" type="Control"]
 process_mode = 3
@@ -10,53 +11,63 @@ anchor_left = -0.222222
 anchor_top = -0.234568
 anchor_right = 0.222222
 anchor_bottom = 0.209877
-offset_top = 8.0
-offset_bottom = 8.0
+offset_left = -35.5558
+offset_top = -7.11104
+offset_right = -35.5558
+offset_bottom = -7.11104
+scale = Vector2(1.25, 1.25)
 size_flags_horizontal = 0
+theme = ExtResource("2_dhx06")
 script = ExtResource("1_2hn82")
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = -64.0
+anchor_left = 0.445
+anchor_top = 0.462
+anchor_right = 0.445
+anchor_bottom = 0.462
+offset_left = -54.7553
+offset_top = -71.0402
+offset_right = 1.24469
+offset_bottom = -7.04019
 scale = Vector2(2, 2)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 4.0
-offset_right = 61.0
-offset_bottom = 81.0
+offset_left = 8.72208
+offset_top = 5.94448
+offset_right = 61.7221
+offset_bottom = 75.9445
 scale = Vector2(0.75, 0.75)
 
 [node name="Score" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
+theme = ExtResource("2_dhx06")
+theme_override_font_sizes/font_size = 10
 text = "Score: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Highscore" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
+theme = ExtResource("2_dhx06")
+theme_override_font_sizes/font_size = 10
 text = "Highscore: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Play Again" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
+theme = ExtResource("2_dhx06")
+theme_override_font_sizes/font_size = 10
 text = "Play Again"
 
 [node name="Quit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 8
+theme = ExtResource("2_dhx06")
+theme_override_font_sizes/font_size = 10
 text = "Quit"
 
 [node name="Camera2D" type="Camera2D" parent="."]

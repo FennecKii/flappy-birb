@@ -55,6 +55,7 @@ func update_score():
 func _on_thing_killed():
 	if Global.score > Global.highscore:
 		Global.highscore = Global.score
+	await get_tree().create_timer(0.1).timeout
 	get_tree().paused = true
 	death_panel.visible = true
 
@@ -66,4 +67,5 @@ func spawn_floor(floor_position: Vector2i):
 func _on_floor_bound_entered(area):
 	if area.get_parent().is_in_group("Floors"):
 		area.get_parent().queue_free()
-		spawn_floor(Vector2(309, 116))
+		await get_tree().create_timer(0.1).timeout
+		spawn_floor(Vector2(310, 116))

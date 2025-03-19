@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://8618vnetgk3o"]
+[gd_scene load_steps=9 format=3 uid="uid://8618vnetgk3o"]
 
 [ext_resource type="Script" uid="uid://dklfb6y24ow1e" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://1wdj4ifys400" path="res://Scenes/thing.tscn" id="2_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://se4f611x8ej1" path="res://Assets/Art/Background/Background(100) 1.0.1.1.png" id="2_kry3j"]
 [ext_resource type="PackedScene" uid="uid://dhna661np5vj6" path="res://Scenes/UI/death_panel.tscn" id="3_kry3j"]
+[ext_resource type="Theme" uid="uid://mxuh4rggdod8" path="res://Scripts/Resources/default_theme.tres" id="4_21xkr"]
 [ext_resource type="PackedScene" uid="uid://bcxogfy4t7g2a" path="res://Scenes/floor.tscn" id="5_kry3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
@@ -13,6 +15,14 @@ size = Vector2(16, 328)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_8gbba")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -256.0
+offset_top = -292.0
+offset_bottom = -88.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_kry3j")
+stretch_mode = 1
 
 [node name="GameCamera" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
@@ -43,8 +53,8 @@ shape = SubResource("RectangleShape2D_h2yge")
 [node name="FloorBound" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 16
-metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Left" type="CollisionShape2D" parent="FloorBound"]
 position = Vector2(-968, 0)
@@ -57,14 +67,23 @@ metadata/_edit_group_ = true
 [node name="Score" type="Label" parent="."]
 z_index = 2
 offset_left = -24.0
-offset_top = -104.0
-offset_right = 24.0
-offset_bottom = -81.0
+offset_top = -120.0
+offset_right = 28.0
+offset_bottom = -79.0
+theme = ExtResource("4_21xkr")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 50
 text = "0"
 horizontal_alignment = 1
 
 [node name="DeathPanel" parent="." instance=ExtResource("3_kry3j")]
 visible = false
+offset_left = -1.35525e-20
+offset_top = 8.0
+offset_right = -1.35525e-20
+offset_bottom = 8.0
 
 [node name="Floor2" parent="." instance=ExtResource("5_kry3j")]
 offset_left = -960.0

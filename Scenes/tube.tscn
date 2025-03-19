@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dmmjkluodmu2h" path="res://Assets/Art/Objects/Tube Bottom(100) 1.0.0.1.png" id="3_adwee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8nf"]
-size = Vector2(23.2015, 20.36)
+size = Vector2(23.2015, 20.2235)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02hxq"]
-size = Vector2(17, 54)
+size = Vector2(18.5, 54)
 
 [node name="Tube" type="Node2D" groups=["Tubes"]]
 script = ExtResource("1_02hxq")
@@ -29,7 +29,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="TubeCollision" type="CollisionShape2D" parent="TubeSpriteTop/TubeDetection"]
-position = Vector2(-0.111973, 1.52588e-05)
+position = Vector2(-0.111973, -0.0956726)
 scale = Vector2(1.5, 6.25)
 shape = SubResource("RectangleShape2D_5x8nf")
 
@@ -45,7 +45,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="TubeCollision" type="CollisionShape2D" parent="TubeSpriteBottom/TubeDetection"]
-position = Vector2(-0.111973, 1.41859e-05)
+position = Vector2(-0.111973, 0.331047)
 scale = Vector2(1.5, 6.25)
 shape = SubResource("RectangleShape2D_5x8nf")
 
@@ -54,7 +54,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreDetection"]
-position = Vector2(20, 0)
+position = Vector2(19.25, 0)
 shape = SubResource("RectangleShape2D_02hxq")
 
 [connection signal="body_entered" from="TubeSpriteTop/TubeDetection" to="." method="_on_tube_entered"]

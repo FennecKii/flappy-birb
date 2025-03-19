@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://mxuh4rggdod8"]
+
+[ext_resource type="FontFile" uid="uid://eag6la6felvr" path="res://Scripts/Resources/Fonts/Micro5-Regular.ttf" id="1_a6a7e"]
+
+[resource]
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_a6a7e")
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_a6a7e")
