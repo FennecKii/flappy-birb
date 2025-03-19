@@ -11,3 +11,7 @@ func _on_visibility_changed():
 	if self.visible == true:
 		score_label.text = "Score: " + str(Global.score)
 		highscore_label.text = "Highscore: " + str(Global.highscore)
+
+func _on_quit_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")

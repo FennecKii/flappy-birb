@@ -6,7 +6,7 @@ func _physics_process(delta):
 func _on_tube_entered(body):
 	if body.name == "Thing":
 		Global.thing_killed.emit()
-		body.queue_free()
+		body.velocity.y = 100
 
 func _on_score_detection_entered(body):
 	if body.name == "Thing":

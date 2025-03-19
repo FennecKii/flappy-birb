@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://8618vnetgk3o"]
+[gd_scene load_steps=10 format=3 uid="uid://8618vnetgk3o"]
 
 [ext_resource type="Script" uid="uid://dklfb6y24ow1e" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://1wdj4ifys400" path="res://Scenes/thing.tscn" id="2_jjvhh"]
@@ -9,6 +9,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(576, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21xkr"]
+size = Vector2(576, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(16, 328)
@@ -42,6 +45,13 @@ collision_layer = 4
 position = Vector2(0, 124)
 shape = SubResource("RectangleShape2D_0xm2m")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="ThingBottomBound"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThingBottomBound/StaticBody2D"]
+position = Vector2(0, 128.2)
+shape = SubResource("RectangleShape2D_21xkr")
+
 [node name="TubeBound" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 2
@@ -62,14 +72,15 @@ shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="Thing" parent="." instance=ExtResource("2_jjvhh")]
 z_index = 2
+position = Vector2(0, -12)
 metadata/_edit_group_ = true
 
 [node name="Score" type="Label" parent="."]
 z_index = 2
 offset_left = -24.0
-offset_top = -120.0
+offset_top = -124.0
 offset_right = 28.0
-offset_bottom = -79.0
+offset_bottom = -73.2188
 theme = ExtResource("4_21xkr")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -86,6 +97,7 @@ offset_right = -1.35525e-20
 offset_bottom = 8.0
 
 [node name="Floor2" parent="." instance=ExtResource("5_kry3j")]
+z_index = 2
 offset_left = -960.0
 offset_top = 116.0
 offset_right = -640.0
@@ -94,6 +106,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="Floor" parent="." instance=ExtResource("5_kry3j")]
+z_index = 2
 offset_left = -320.0
 offset_top = 116.0
 offset_right = 0.0
