@@ -7,6 +7,7 @@ signal thing_killed
 
 var score: int = 0
 var highscore: int = 0
+var death_sound_played: bool = false
 
 @onready var background_music = preload("res://Assets/Sound/Music/Keys Starry Night Main.wav")
 @onready var button_click = preload("res://Assets/Sound/SFX/UI/Sweet Click A.wav")
@@ -19,4 +20,5 @@ var highscore: int = 0
 
 func initialize_game_state():
 	score = 0
+	death_sound_played = false
 	highscore = SaveLoad.contents_to_save.highscore_value

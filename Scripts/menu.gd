@@ -16,7 +16,7 @@ func _on_quit_pressed():
 	AudioStreamer.play_sfx(Global.button_click, 2)
 	SaveLoad.contents_to_save.highscore_value = Global.highscore
 	SaveLoad._save()
-	await get_tree().create_timer(0.75).timeout
+	await get_tree().create_timer(0.5).timeout
 	get_tree().quit()
 
 func _on_button_entered():
