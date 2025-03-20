@@ -12,6 +12,7 @@ func _on_settings_pressed():
 
 func _on_quit_pressed():
 	AudioStreamer.play_sfx(Global.button_click, 2)
+	await get_tree().create_timer(0.75).timeout
 	get_tree().quit()
 
 func _on_button_entered():
