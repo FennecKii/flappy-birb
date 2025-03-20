@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 	velocity += get_gravity() * delta
 	velocity.y = clamp(velocity.y, -240, 340)
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and !thing_killed:
+	if (Input.is_action_just_pressed("Jump") or Input.is_action_just_pressed("Mouse_Jump")) and !thing_killed:
 		velocity.y = Global.JUMP_VELOCITY
 		AudioStreamer.play_sfx(Global.jump_sound, -3)
 	

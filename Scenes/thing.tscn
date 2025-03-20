@@ -69,8 +69,9 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vu45j"]
-radius = 5.5
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llmkr"]
+radius = 4.0
+height = 11.0
 
 [node name="Thing" type="CharacterBody2D" groups=["Things"]]
 process_mode = 3
@@ -87,4 +88,4 @@ autoplay = "flap"
 
 [node name="ThingCollision" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)
-shape = SubResource("CircleShape2D_vu45j")
+shape = SubResource("CapsuleShape2D_llmkr")

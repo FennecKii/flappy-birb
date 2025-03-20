@@ -3,6 +3,13 @@ extends Control
 @onready var score_label: Label = $Panel/VBoxContainer/Score
 @onready var highscore_label: Label = $Panel/VBoxContainer/Highscore
 
+func _process(delta):
+	if self.visible and Input.is_action_just_pressed("Jump"):
+		get_tree().paused = false
+		AudioStreamer.play_sfx(Global.button_click, 2)
+		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+		
+
 func _on_play_again_pressed():
 	get_tree().paused = false
 	AudioStreamer.play_sfx(Global.button_click, 2)

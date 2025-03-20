@@ -1,6 +1,6 @@
 extends Node
 
-const JUMP_VELOCITY: float = -240.0
+const JUMP_VELOCITY: float = -235.0
 const TUBE_SPEED: float = 100.0
 
 signal thing_killed
