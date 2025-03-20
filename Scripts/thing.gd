@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
-@onready var thing_animation: AnimatedSprite2D = $ThingAnimation
+@onready var thing_outline_animation: AnimatedSprite2D = $Outline
+@onready var thing_body_animation: AnimatedSprite2D = $Body
 @onready var thing_killed: bool = false
 
 func _ready():
 	Global.thing_killed.connect(_on_thing_killed)
 
 func _physics_process(delta: float) -> void:
+	pass
 	# Add the gravity.
 	velocity += get_gravity() * delta
 	velocity.y = clamp(velocity.y, -240, 340)
@@ -22,11 +24,13 @@ func update_animation():
 	if velocity.y >= 110:
 		var tween_down = create_tween()
 		tween_down.tween_property(self, "rotation", deg_to_rad(20), 0.3)
-		thing_animation.play("fall")
-	elif velocity.y < 50:
+		thing_outline_animation.play("fall")
+		thing_body_animation.play("fall")
+	elif velocity.y < 70:
 		var tween_up = create_tween()
 		tween_up.tween_property(self, "rotation", deg_to_rad(-15), 0.5)
-		thing_animation.play("flap")
+		thing_outline_animation.play("flap")
+		thing_body_animation.play("flap")
 	else:
 		self.rotation = 0
 
