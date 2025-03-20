@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c07phllc7hd2u"
+path="res://.godot/imported/Sweet Click A.wav-d6b03e0ee9f1dba5deb5fb82529c71f7.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/UI/Sweet Click A.wav"
+dest_files=["res://.godot/imported/Sweet Click A.wav-d6b03e0ee9f1dba5deb5fb82529c71f7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

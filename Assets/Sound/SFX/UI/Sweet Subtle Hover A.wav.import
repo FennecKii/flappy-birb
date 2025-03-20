@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhmhvgrifmqq"
+path="res://.godot/imported/Sweet Subtle Hover A.wav-fb6bc251fb0d2b5194b71a9fce1e3319.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/UI/Sweet Subtle Hover A.wav"
+dest_files=["res://.godot/imported/Sweet Subtle Hover A.wav-fb6bc251fb0d2b5194b71a9fce1e3319.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

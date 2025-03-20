@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://527cb4dfknt1"
+path="res://.godot/imported/Platform Bounce 002.wav-7bf996c75e85f9a4cf85276a3523a1a6.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Gameplay/Platform Bounce 002.wav"
+dest_files=["res://.godot/imported/Platform Bounce 002.wav-7bf996c75e85f9a4cf85276a3523a1a6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

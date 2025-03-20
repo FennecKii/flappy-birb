@@ -55,6 +55,9 @@ process_mode = 3
 layout_mode = 2
 text = "Quit"
 
+[connection signal="mouse_entered" from="Buttons/Play" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Buttons/Settings" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="mouse_entered" from="Buttons/Quit" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]

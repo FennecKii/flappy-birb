@@ -37,6 +37,7 @@ func _on_bottom_bound_entered(body):
 	if body.name == "Thing":
 		if Global.score > Global.highscore:
 			Global.highscore = Global.score
+		AudioStreamer.play_sfx(Global.death_sound, 2)
 		body.process_mode = Node.PROCESS_MODE_DISABLED
 		death_panel.visible = true
 		get_tree().paused = true
