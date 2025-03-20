@@ -16,6 +16,8 @@ func _on_visibility_changed():
 func _on_quit_pressed():
 	get_tree().paused = false
 	AudioStreamer.play_sfx(Global.button_click, 2)
+	SaveLoad.contents_to_save.highscore_value = Global.highscore
+	SaveLoad._save()
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 
 func _on_button_entered():

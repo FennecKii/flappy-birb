@@ -19,3 +19,4 @@ var highscore: int = 0
 
 func initialize_game_state():
 	score = 0
+	highscore = SaveLoad.contents_to_save.highscore_value
