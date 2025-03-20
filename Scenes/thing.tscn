@@ -82,8 +82,8 @@ script = ExtResource("1_glpr6")
 position = Vector2(5.96046e-07, 5.96046e-07)
 scale = Vector2(1.625, 1.625)
 sprite_frames = SubResource("SpriteFrames_n77op")
-animation = &"blue flap"
-autoplay = "blue flap"
+animation = &"flap"
+autoplay = "flap"
 
 [node name="ThingCollision" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)

@@ -37,8 +37,9 @@ func _on_bottom_bound_entered(body):
 	if body.name == "Thing":
 		if Global.score > Global.highscore:
 			Global.highscore = Global.score
-		get_tree().paused = true
+		body.process_mode = Node.PROCESS_MODE_DISABLED
 		death_panel.visible = true
+		get_tree().paused = true
 
 func _on_tube_bound_entered(body):
 	if body.get_parent().is_in_group("Tubes"):
@@ -56,7 +57,13 @@ func _on_thing_killed():
 	if Global.score > Global.highscore:
 		Global.highscore = Global.score
 	await get_tree().create_timer(0.01).timeout
+	self.set_process(false)
+	for floor in get_tree().get_nodes_in_group("Floors"):
+		floor.process_mode = Node.PROCESS_MODE_DISABLED
+	for tube in get_tree().get_nodes_in_group("Tubes"):
+		tube.process_mode = Node.PROCESS_MODE_DISABLED
 	death_panel.visible = true
+	await get_tree().create_timer(1.5).timeout
 	get_tree().paused = true
 
 func spawn_floor(floor_position: Vector2i):
@@ -69,3 +76,7 @@ func _on_floor_bound_entered(area):
 		area.get_parent().queue_free()
 		await get_tree().create_timer(0.01).timeout
 		spawn_floor(Vector2(306, 116))
+
+
+func _on_thing_bottom_bound_body_entered(body):
+	pass # Replace with function body.
