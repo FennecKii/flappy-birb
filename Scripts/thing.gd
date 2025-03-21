@@ -9,11 +9,6 @@ func _ready():
 
 func _process(_delta):
 	update_colors()
-	if Input.is_action_just_pressed("Settings"):
-		if self.is_physics_processing():
-			self.set_physics_process(false)
-		else:
-			self.set_physics_process(true)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
