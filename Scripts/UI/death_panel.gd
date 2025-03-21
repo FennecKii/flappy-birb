@@ -5,9 +5,7 @@ extends Control
 
 func _process(_delta):
 	if self.visible and Input.is_action_just_pressed("Jump"):
-		get_tree().paused = false
-		AudioStreamer.play_sfx(Global.button_click, 2)
-		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+		_on_play_again_pressed()
 
 func _on_play_again_pressed():
 	get_tree().paused = false

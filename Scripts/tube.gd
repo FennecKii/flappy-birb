@@ -15,6 +15,6 @@ func _on_score_detection_entered(body):
 		Global.score += 1
 		AudioStreamer.play_sfx(Global.score_1, -3)
 		if Global.score % 100 == 0:
-			AudioStreamer.play_sfx(Global.score_100, -4)
+			AudioStreamer.play_sfx(Global.score_100, -3)
 		elif Global.score % 25 == 0:
 			AudioStreamer.play_sfx(Global.score_25, -4)

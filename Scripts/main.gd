@@ -6,7 +6,7 @@ extends Node2D
 @onready var death_panel: Control = $DeathPanel
 
 var tube_spacing_min: float = 125
-var tube_spacing_max: float = 135
+var tube_spacing_max: float = 130
 var spawn_position_min: float = -65
 var spawn_position_max: float = 50
 var floor_spawned: bool = false
