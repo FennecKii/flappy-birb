@@ -13,7 +13,7 @@ config_version=5
 config/name="Flappy Thing"
 run/main_scene="uid://cj4r3cj0k242i"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="uid://b5u58675dtlut"
+config/icon="uid://cn83tvni2jxae"
 
 [audio]
 
