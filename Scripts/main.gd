@@ -15,6 +15,8 @@ var tube_num: int = 0
 
 func _ready():
 	Global.initialize_game_state()
+	SaveLoad._load()
+	Global.highscore = SaveLoad.contents_to_save.highscore_value
 	Global.thing_killed.connect(_on_thing_killed)
 
 func _process(_delta):
@@ -61,8 +63,8 @@ func _on_thing_killed():
 		Global.highscore = Global.score
 	await get_tree().create_timer(0.01).timeout
 	self.set_process(false)
-	for floor in get_tree().get_nodes_in_group("Floors"):
-		floor.process_mode = Node.PROCESS_MODE_DISABLED
+	for floor_sprite in get_tree().get_nodes_in_group("Floors"):
+		floor_sprite.process_mode = Node.PROCESS_MODE_DISABLED
 	for tube in get_tree().get_nodes_in_group("Tubes"):
 		tube.process_mode = Node.PROCESS_MODE_DISABLED
 	death_panel.visible = true
@@ -79,7 +81,3 @@ func _on_floor_bound_entered(area):
 		area.get_parent().queue_free()
 		await get_tree().create_timer(0.01).timeout
 		spawn_floor(Vector2(306, 116))
-
-
-func _on_thing_bottom_bound_body_entered(body):
-	pass # Replace with function body.

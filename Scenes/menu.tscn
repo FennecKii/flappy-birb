@@ -45,6 +45,11 @@ process_mode = 3
 layout_mode = 2
 text = "Play"
 
+[node name="Customize" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Customize
+"
+
 [node name="Settings" type="Button" parent="Buttons"]
 process_mode = 3
 layout_mode = 2
@@ -57,6 +62,8 @@ text = "Quit"
 
 [connection signal="mouse_entered" from="Buttons/Play" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Buttons/Customize" to="." method="_on_button_entered"]
+[connection signal="pressed" from="Buttons/Customize" to="." method="_on_customize_pressed"]
 [connection signal="mouse_entered" from="Buttons/Settings" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="mouse_entered" from="Buttons/Quit" to="." method="_on_button_entered"]

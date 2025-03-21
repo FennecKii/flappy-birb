@@ -9,6 +9,11 @@ var score: int = 0
 var highscore: int = 0
 var death_sound_played: bool = false
 
+var thing_eye_color: Color = Color8(59, 36, 62, 255)
+var thing_mouth_color: Color = Color8(197, 77, 113, 255)
+var thing_body_color: Color = Color8(191, 152, 197, 255)
+var thing_outline_color: Color = Color8(105, 73, 112, 255)
+
 @onready var background_music = preload("res://Assets/Sound/Music/Keys Starry Night Main.wav")
 @onready var button_click = preload("res://Assets/Sound/SFX/UI/Sweet Click A.wav")
 @onready var button_hover = preload("res://Assets/Sound/SFX/UI/Sweet Subtle Hover A.wav")

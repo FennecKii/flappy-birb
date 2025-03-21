@@ -1,0 +1,186 @@
+[gd_scene load_steps=4 format=3 uid="uid://bukk6uv4hh4jl"]
+
+[ext_resource type="Theme" uid="uid://mxuh4rggdod8" path="res://Scripts/Resources/default_theme.tres" id="1_luej8"]
+[ext_resource type="Script" uid="uid://carg5tx5c2un0" path="res://Scripts/UI/customize.gd" id="1_pvwne"]
+[ext_resource type="PackedScene" uid="uid://1wdj4ifys400" path="res://Scenes/thing.tscn" id="2_c0d0e"]
+
+[node name="Customize" type="Node2D"]
+script = ExtResource("1_pvwne")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.819608, 0.796078, 0.627451, 1)
+
+[node name="Tabs" type="HBoxContainer" parent="."]
+offset_left = 480.0
+offset_top = 64.0
+offset_right = 814.0
+offset_bottom = 133.0
+theme = ExtResource("1_luej8")
+
+[node name="Thing" type="Button" parent="Tabs"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Thing"
+
+[node name="Tubes" type="Button" parent="Tabs"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Tubes
+"
+
+[node name="Floor" type="Button" parent="Tabs"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Floor"
+
+[node name="Thing" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Colors" type="VBoxContainer" parent="Thing"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 248.0
+offset_right = 326.0
+offset_bottom = 324.0
+scale = Vector2(4, 4)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource("1_luej8")
+alignment = 1
+
+[node name="Eyes" type="HBoxContainer" parent="Thing/Colors"]
+layout_mode = 2
+
+[node name="Eyes" type="Label" parent="Thing/Colors/Eyes"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Eyes:"
+
+[node name="Control" type="Control" parent="Thing/Colors/Eyes"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Thing/Colors/Eyes"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="Thing/Colors/Eyes"]
+layout_mode = 2
+
+[node name="Reset" type="Button" parent="Thing/Colors/Eyes"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "Reset"
+
+[node name="EyeColor" type="ColorPickerButton" parent="Thing/Colors/Eyes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_luej8")
+theme_override_colors/font_color = Color(0.914464, 0.914464, 0.914464, 1)
+theme_override_font_sizes/font_size = 1
+text = "0
+"
+
+[node name="Mouth" type="HBoxContainer" parent="Thing/Colors"]
+layout_mode = 2
+
+[node name="Mouth" type="Label" parent="Thing/Colors/Mouth"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Mouth:"
+
+[node name="Control2" type="Control" parent="Thing/Colors/Mouth"]
+layout_mode = 2
+
+[node name="Reset" type="Button" parent="Thing/Colors/Mouth"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "Reset"
+
+[node name="MouthColor" type="ColorPickerButton" parent="Thing/Colors/Mouth"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_luej8")
+theme_override_font_sizes/font_size = 1
+text = "1"
+
+[node name="Body" type="HBoxContainer" parent="Thing/Colors"]
+layout_mode = 2
+
+[node name="Body" type="Label" parent="Thing/Colors/Body"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Body:"
+
+[node name="Control" type="Control" parent="Thing/Colors/Body"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="Thing/Colors/Body"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Thing/Colors/Body"]
+layout_mode = 2
+
+[node name="Reset" type="Button" parent="Thing/Colors/Body"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "Reset"
+
+[node name="BodyColor" type="ColorPickerButton" parent="Thing/Colors/Body"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_luej8")
+theme_override_font_sizes/font_size = 1
+text = "2"
+
+[node name="Outline" type="HBoxContainer" parent="Thing/Colors"]
+layout_mode = 2
+
+[node name="Outline" type="Label" parent="Thing/Colors/Outline"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Outline:"
+
+[node name="Reset" type="Button" parent="Thing/Colors/Outline"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "Reset"
+
+[node name="OutlineColor" type="ColorPickerButton" parent="Thing/Colors/Outline"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_luej8")
+theme_override_font_sizes/font_size = 1
+text = "3"
+
+[node name="Thing" parent="Thing" instance=ExtResource("2_c0d0e")]
+position = Vector2(952, 396)
+scale = Vector2(10, 10)
+
+[node name="Close" type="Button" parent="."]
+offset_left = 628.0
+offset_top = 628.0
+offset_right = 694.0
+offset_bottom = 674.0
+theme = ExtResource("1_luej8")
+theme_override_font_sizes/font_size = 37
+text = "Close
+"
+
+[connection signal="pressed" from="Tabs/Thing" to="." method="_on_thing_tab_pressed"]
+[connection signal="pressed" from="Thing/Colors/Eyes/Reset" to="." method="_on_reset_eyes_pressed"]
+[connection signal="color_changed" from="Thing/Colors/Eyes/EyeColor" to="." method="_on_eye_color_changed"]
+[connection signal="pressed" from="Thing/Colors/Mouth/Reset" to="." method="_on_reset_mouth_pressed"]
+[connection signal="color_changed" from="Thing/Colors/Mouth/MouthColor" to="." method="_on_mouth_color_changed"]
+[connection signal="pressed" from="Thing/Colors/Body/Reset" to="." method="_on_reset_body_pressed"]
+[connection signal="color_changed" from="Thing/Colors/Body/BodyColor" to="." method="_on_body_color_changed"]
+[connection signal="pressed" from="Thing/Colors/Outline/Reset" to="." method="_on_reset_outline_pressed"]
+[connection signal="color_changed" from="Thing/Colors/Outline/OutlineColor" to="." method="_on_outline_color_changed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
