@@ -15,7 +15,6 @@ offset_left = -35.5558
 offset_top = -7.11104
 offset_right = -35.5558
 offset_bottom = -7.11104
-scale = Vector2(1.25, 1.25)
 size_flags_horizontal = 0
 theme = ExtResource("2_dhx06")
 script = ExtResource("1_2hn82")

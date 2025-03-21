@@ -34,25 +34,34 @@ func _on_outline_color_changed(color):
 	Global.thing_outline_color = color
 
 func _on_reset_eyes_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
 	Global.thing_eye_color = thing_default_eye_color
 	thing_eye_color.color = thing_default_eye_color
 
 func _on_reset_mouth_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
 	Global.thing_mouth_color = thing_default_mouth_color
 	thing_mouth_color.color = thing_default_mouth_color
 
 func _on_reset_body_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
 	Global.thing_body_color = thing_default_body_color
 	thing_body_color.color = thing_default_body_color
 
 func _on_reset_outline_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
 	Global.thing_outline_color = thing_default_outline_color
 	thing_outline_color.color = thing_default_outline_color
 
 func _on_thing_tab_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
 	thing_tab.visible = true
 
 func _on_close_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
 	SaveLoad.contents_to_save.thing_colors = [Global.thing_eye_color, Global.thing_mouth_color, Global.thing_body_color, Global.thing_outline_color]
 	SaveLoad._save()
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+
+func _on_button_entered():
+	AudioStreamer.play_sfx(Global.button_hover)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cj4r3cj0k242i"]
+[gd_scene load_steps=4 format=3 uid="uid://cj4r3cj0k242i"]
 
 [ext_resource type="Theme" uid="uid://mxuh4rggdod8" path="res://Scripts/Resources/default_theme.tres" id="1_1rerr"]
 [ext_resource type="Script" uid="uid://b6ugdymjhmev7" path="res://Scripts/menu.gd" id="1_xhh6f"]
+[ext_resource type="PackedScene" uid="uid://c3poufoa5flat" path="res://Scenes/UI/settings_panel.tscn" id="3_cayip"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_xhh6f")
@@ -19,25 +20,26 @@ color = Color(0.819608, 0.796078, 0.627451, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = -220.0
-offset_top = -228.0
+offset_left = -232.0
+offset_top = -224.0
 offset_right = 228.0
-offset_bottom = -126.438
+offset_bottom = -107.203
 size_flags_horizontal = 4
 theme = ExtResource("1_1rerr")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 13
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 115
 text = "Flappy Thing"
 horizontal_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 process_mode = 3
-offset_left = -80.0
-offset_top = -12.0
-offset_right = 80.0
-offset_bottom = 195.0
+offset_left = -120.0
+offset_top = -44.0
+offset_right = 40.0
+offset_bottom = 163.0
+scale = Vector2(1.5, 1.5)
 theme = ExtResource("1_1rerr")
 
 [node name="Play" type="Button" parent="Buttons"]
@@ -59,6 +61,14 @@ text = "Settings"
 process_mode = 3
 layout_mode = 2
 text = "Quit"
+
+[node name="SettingsPanel" parent="." instance=ExtResource("3_cayip")]
+visible = false
+z_index = 1
+offset_left = -648.0
+offset_top = -360.0
+offset_right = -648.0
+offset_bottom = -360.0
 
 [connection signal="mouse_entered" from="Buttons/Play" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]

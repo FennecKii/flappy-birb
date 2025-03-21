@@ -4,7 +4,8 @@ const save_location = "user://SaveFile.json"
 
 var contents_to_save: Dictionary = {
 	"highscore_value": 0,
-	"thing_colors": [Color8(59, 36, 62, 255), Color8(197, 77, 113, 255), Color8(191, 152, 197, 255), Color8(105, 73, 112, 255)]
+	"thing_colors": [Color8(59, 36, 62, 255), Color8(197, 77, 113, 255), Color8(191, 152, 197, 255), Color8(105, 73, 112, 255)],
+	"audio_server": [0, 0, 0],
 }
 
 func _save():
@@ -21,3 +22,4 @@ func _load():
 		var save_data = data.duplicate()
 		contents_to_save.highscore_value = save_data.highscore_value
 		contents_to_save.thing_colors = save_data.thing_colors
+		contents_to_save.audio_server = save_data.audio_server
