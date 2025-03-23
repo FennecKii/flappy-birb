@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://8618vnetgk3o"]
+[gd_scene load_steps=11 format=3 uid="uid://8618vnetgk3o"]
 
 [ext_resource type="Script" uid="uid://dklfb6y24ow1e" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://1wdj4ifys400" path="res://Scenes/thing.tscn" id="2_jjvhh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhna661np5vj6" path="res://Scenes/UI/death_panel.tscn" id="3_kry3j"]
 [ext_resource type="Theme" uid="uid://mxuh4rggdod8" path="res://Scripts/Resources/default_theme.tres" id="4_21xkr"]
 [ext_resource type="PackedScene" uid="uid://bcxogfy4t7g2a" path="res://Scenes/floor.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://5sdcmuwc1nye" path="res://Scenes/UI/submit_score.tscn" id="6_6bp64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(576, 16)
@@ -84,9 +85,9 @@ offset_top = -130.0
 offset_right = 28.0
 offset_bottom = -79.2188
 theme = ExtResource("4_21xkr")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 7
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
 theme_override_font_sizes/font_size = 40
 text = "0"
 horizontal_alignment = 1
@@ -97,6 +98,13 @@ offset_left = 0.0
 offset_top = -2.0
 offset_right = 0.0
 offset_bottom = -2.0
+
+[node name="SubmitScore" parent="." instance=ExtResource("6_6bp64")]
+visible = false
+offset_left = -136.0
+offset_top = -237.0
+offset_right = -96.0
+offset_bottom = -197.0
 
 [node name="Floor2" parent="." instance=ExtResource("5_kry3j")]
 z_index = 2

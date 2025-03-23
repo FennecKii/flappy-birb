@@ -37,3 +37,7 @@ func _on_button_entered():
 func _on_customize_pressed():
 	AudioStreamer.play_sfx(Global.button_click, 2)
 	get_tree().change_scene_to_file("res://Scenes/UI/customize.tscn")
+
+func _on_leaderboards_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
+	get_tree().change_scene_to_file("res://addons/silent_wolf/Scores/Leaderboard.tscn")

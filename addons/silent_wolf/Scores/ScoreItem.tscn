@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://2wy4d8d5av0l"]
+
+[ext_resource type="Theme" uid="uid://mxuh4rggdod8" path="res://Scripts/Resources/default_theme.tres" id="1_vs5no"]
+[ext_resource type="Script" uid="uid://dbymin5i41plx" path="res://addons/silent_wolf/Scores/score_item.gd" id="2_478tt"]
+[ext_resource type="FontFile" uid="uid://eag6la6felvr" path="res://Scripts/Resources/Fonts/Micro5-Regular.ttf" id="2_m56l6"]
+[ext_resource type="PackedScene" uid="uid://1wdj4ifys400" path="res://Scenes/thing.tscn" id="3_fhuvw"]
+
+[node name="ScoreItem" type="Panel"]
+custom_minimum_size = Vector2(500, 35)
+offset_left = -500.0
+offset_top = -35.0
+theme = ExtResource("1_vs5no")
+script = ExtResource("2_478tt")
+
+[node name="PlayerName" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 0
+offset_left = 38.0
+offset_top = 2.0
+offset_right = 411.0
+offset_bottom = 35.0
+theme = ExtResource("1_vs5no")
+theme_override_fonts/normal_font = ExtResource("2_m56l6")
+theme_override_font_sizes/normal_font_size = 32
+text = "1. Godzilla"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 2.0
+offset_right = 495.0
+offset_bottom = 35.0
+theme = ExtResource("1_vs5no")
+theme_override_font_sizes/font_size = 32
+text = "13"
+horizontal_alignment = 2
+
+[node name="Thing" parent="." instance=ExtResource("3_fhuvw")]
+position = Vector2(18, 17.5)
+scale = Vector2(1.25, 1.25)
+
+[editable path="Thing"]

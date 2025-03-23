@@ -8,6 +8,7 @@ signal thing_killed
 var score: int = 0
 var highscore: int = 0
 var death_sound_played: bool = false
+var highscore_set: bool = false
 
 var thing_eye_color: Color = Color8(59, 36, 62, 255)
 var thing_mouth_color: Color = Color8(197, 77, 113, 255)
@@ -22,6 +23,17 @@ var thing_outline_color: Color = Color8(105, 73, 112, 255)
 @onready var score_100 = preload("res://Assets/Sound/SFX/Gameplay/Key Acquired 002.wav")
 @onready var jump_sound = preload("res://Assets/Sound/SFX/Gameplay/Platform Bounce 002.wav")
 @onready var death_sound = preload("res://Assets/Sound/SFX/Gameplay/Stick Hit 003.wav")
+
+func _ready():
+	SilentWolf.configure({
+	"api_key": "HvDhFonLNJav6XnrvSzkU9IGOQYEUFgL4s9HQTmP",
+	"game_id": "flappything",
+	"log_level": 1
+	})
+
+	SilentWolf.configure_scores({
+	"open_scene_on_close": "res://scenes/MainPage.tscn"
+	})
 
 func initialize_game_state():
 	score = 0

@@ -13,15 +13,17 @@ offset_bottom = 720.0
 color = Color(0.819608, 0.796078, 0.627451, 1)
 
 [node name="Tabs" type="HBoxContainer" parent="."]
-offset_left = 586.0
-offset_top = 64.0
-offset_right = 693.0
-offset_bottom = 133.0
+offset_left = 582.395
+offset_top = 57.0
+offset_right = 697.395
+offset_bottom = 128.0
 theme = ExtResource("1_luej8")
 
-[node name="Thing" type="Button" parent="Tabs"]
+[node name="Thing" type="Label" parent="Tabs"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
 text = "Thing"
 
 [node name="Thing" type="Control" parent="."]
@@ -164,18 +166,21 @@ text = "Close
 "
 
 [connection signal="mouse_entered" from="Tabs/Thing" to="." method="_on_button_entered"]
-[connection signal="pressed" from="Tabs/Thing" to="." method="_on_thing_tab_pressed"]
 [connection signal="mouse_entered" from="Thing/Colors/Eyes/Reset" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Thing/Colors/Eyes/Reset" to="." method="_on_reset_eyes_pressed"]
 [connection signal="color_changed" from="Thing/Colors/Eyes/EyeColor" to="." method="_on_eye_color_changed"]
+[connection signal="pressed" from="Thing/Colors/Eyes/EyeColor" to="." method="_on_color_button_pressed"]
 [connection signal="mouse_entered" from="Thing/Colors/Mouth/Reset" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Thing/Colors/Mouth/Reset" to="." method="_on_reset_mouth_pressed"]
 [connection signal="color_changed" from="Thing/Colors/Mouth/MouthColor" to="." method="_on_mouth_color_changed"]
+[connection signal="pressed" from="Thing/Colors/Mouth/MouthColor" to="." method="_on_color_button_pressed"]
 [connection signal="mouse_entered" from="Thing/Colors/Body/Reset" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Thing/Colors/Body/Reset" to="." method="_on_reset_body_pressed"]
 [connection signal="color_changed" from="Thing/Colors/Body/BodyColor" to="." method="_on_body_color_changed"]
+[connection signal="pressed" from="Thing/Colors/Body/BodyColor" to="." method="_on_color_button_pressed"]
 [connection signal="mouse_entered" from="Thing/Colors/Outline/Reset" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Thing/Colors/Outline/Reset" to="." method="_on_reset_outline_pressed"]
 [connection signal="color_changed" from="Thing/Colors/Outline/OutlineColor" to="." method="_on_outline_color_changed"]
+[connection signal="pressed" from="Thing/Colors/Outline/OutlineColor" to="." method="_on_color_button_pressed"]
 [connection signal="mouse_entered" from="Close" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

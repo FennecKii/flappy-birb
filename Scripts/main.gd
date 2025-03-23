@@ -4,6 +4,7 @@ extends Node2D
 @onready var floor_scene: PackedScene = preload("res://Scenes/floor.tscn")
 @onready var score_label: Label = $Score
 @onready var death_panel: Control = $DeathPanel
+@onready var submit_score: Control = $SubmitScore
 
 var tube_spacing_min: float = 125
 var tube_spacing_max: float = 130
@@ -61,6 +62,8 @@ func update_score():
 func _on_thing_killed():
 	if Global.score > Global.highscore:
 		Global.highscore = Global.score
+		Global.highscore_set = true
+		submit_score.visible = true
 	await get_tree().create_timer(0.01).timeout
 	self.set_process(false)
 	for floor_sprite in get_tree().get_nodes_in_group("Floors"):

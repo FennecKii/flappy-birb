@@ -13,3 +13,5 @@ ColorPickerButton/font_sizes/font_size = 5
 ColorPickerButton/fonts/font = ExtResource("1_a6a7e")
 Label/font_sizes/font_size = 25
 Label/fonts/font = ExtResource("1_a6a7e")
+LineEdit/font_sizes/font_size = 25
+LineEdit/fonts/font = ExtResource("1_a6a7e")

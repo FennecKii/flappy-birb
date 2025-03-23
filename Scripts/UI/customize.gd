@@ -65,3 +65,6 @@ func _on_close_pressed():
 
 func _on_button_entered():
 	AudioStreamer.play_sfx(Global.button_hover)
+
+func _on_color_button_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
