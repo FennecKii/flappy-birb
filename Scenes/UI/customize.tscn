@@ -13,10 +13,10 @@ offset_bottom = 720.0
 color = Color(0.819608, 0.796078, 0.627451, 1)
 
 [node name="Tabs" type="HBoxContainer" parent="."]
-offset_left = 911.0
-offset_top = 167.0
-offset_right = 1026.0
-offset_bottom = 312.0
+offset_left = 907.0
+offset_top = 147.0
+offset_right = 1022.0
+offset_bottom = 292.0
 theme = ExtResource("1_luej8")
 
 [node name="Thing" type="Label" parent="Tabs"]
@@ -153,7 +153,7 @@ theme_override_font_sizes/font_size = 1
 text = "3"
 
 [node name="Thing" parent="Thing" instance=ExtResource("2_c0d0e")]
-position = Vector2(941, 362)
+position = Vector2(942, 342)
 scale = Vector2(10, 10)
 
 [node name="Close" type="Button" parent="."]
@@ -165,6 +165,15 @@ theme = ExtResource("1_luej8")
 theme_override_font_sizes/font_size = 37
 text = "Close
 "
+
+[node name="Randomize" type="Button" parent="."]
+offset_left = 890.0
+offset_top = 490.0
+offset_right = 999.0
+offset_bottom = 529.0
+theme = ExtResource("1_luej8")
+theme_override_font_sizes/font_size = 30
+text = "Randomize"
 
 [connection signal="mouse_entered" from="Tabs/Thing" to="." method="_on_button_entered"]
 [connection signal="mouse_entered" from="Thing/Colors/Eyes/Reset" to="." method="_on_button_entered"]
@@ -185,3 +194,5 @@ text = "Close
 [connection signal="pressed" from="Thing/Colors/Outline/OutlineColor" to="." method="_on_color_button_pressed"]
 [connection signal="mouse_entered" from="Close" to="." method="_on_button_entered"]
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="mouse_entered" from="Randomize" to="." method="_on_button_entered"]
+[connection signal="pressed" from="Randomize" to="." method="_on_randomize_pressed"]

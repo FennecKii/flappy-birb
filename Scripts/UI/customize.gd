@@ -68,3 +68,14 @@ func _on_button_entered():
 
 func _on_color_button_pressed():
 	AudioStreamer.play_sfx(Global.button_click, 2)
+
+func _on_randomize_pressed():
+	AudioStreamer.play_sfx(Global.button_click, 2)
+	Global.thing_eye_color = Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255), 255)
+	Global.thing_mouth_color = Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255), 255)
+	Global.thing_body_color = Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255), 255)
+	Global.thing_outline_color = Color8(randi_range(0, 255), randi_range(0, 255), randi_range(0, 255), 255)
+	thing_eye_color.color = Global.thing_eye_color
+	thing_mouth_color.color = Global.thing_mouth_color
+	thing_body_color.color = Global.thing_body_color
+	thing_outline_color.color = Global.thing_outline_color
