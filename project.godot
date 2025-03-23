@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Flappy Thing"
+config/name="Flappy Birb"
 run/main_scene="uid://cj4r3cj0k242i"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/show_image=false
