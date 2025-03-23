@@ -20,17 +20,17 @@ color = Color(0.819608, 0.796078, 0.627451, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = -232.0
-offset_top = -224.0
-offset_right = 228.0
-offset_bottom = -107.203
+offset_left = -228.0
+offset_top = -228.0
+offset_right = 232.0
+offset_bottom = -111.203
 size_flags_horizontal = 4
 theme = ExtResource("1_1rerr")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 31
 theme_override_font_sizes/font_size = 115
-text = "Flappy Thing"
+text = "Flappy Birb"
 horizontal_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="."]

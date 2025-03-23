@@ -13,10 +13,10 @@ offset_bottom = 720.0
 color = Color(0.819608, 0.796078, 0.627451, 1)
 
 [node name="Tabs" type="HBoxContainer" parent="."]
-offset_left = 582.395
-offset_top = 57.0
-offset_right = 697.395
-offset_bottom = 128.0
+offset_left = 911.0
+offset_top = 167.0
+offset_right = 1026.0
+offset_bottom = 312.0
 theme = ExtResource("1_luej8")
 
 [node name="Thing" type="Label" parent="Tabs"]
@@ -24,7 +24,8 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 18
 theme_override_font_sizes/font_size = 70
-text = "Thing"
+text = "Birb
+"
 
 [node name="Thing" type="Control" parent="."]
 layout_mode = 3
@@ -34,10 +35,10 @@ offset_bottom = 40.0
 
 [node name="Colors" type="VBoxContainer" parent="Thing"]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 228.0
-offset_right = 330.0
-offset_bottom = 304.0
+offset_left = 206.0
+offset_top = 186.0
+offset_right = 324.0
+offset_bottom = 262.0
 scale = Vector2(4, 4)
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -152,7 +153,7 @@ theme_override_font_sizes/font_size = 1
 text = "3"
 
 [node name="Thing" parent="Thing" instance=ExtResource("2_c0d0e")]
-position = Vector2(956, 376)
+position = Vector2(941, 362)
 scale = Vector2(10, 10)
 
 [node name="Close" type="Button" parent="."]
