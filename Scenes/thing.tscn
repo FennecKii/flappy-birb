@@ -53,7 +53,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llmkr"]
 radius = 4.5
-height = 10.5
+height = 10.75
 
 [node name="Thing" type="CharacterBody2D" groups=["Things"]]
 process_mode = 3

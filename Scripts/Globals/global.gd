@@ -27,12 +27,12 @@ var thing_outline_color: Color = Color8(105, 73, 112, 255)
 func _ready():
 	SilentWolf.configure({
 	"api_key": "HvDhFonLNJav6XnrvSzkU9IGOQYEUFgL4s9HQTmP",
-	"game_id": "flappything",
+	"game_id": "flappybirb",
 	"log_level": 1
 	})
 
 	SilentWolf.configure_scores({
-	"open_scene_on_close": "res://scenes/MainPage.tscn"
+	"open_scene_on_close": "res://scenes/menu.tscn"
 	})
 
 func initialize_game_state():
